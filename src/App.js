@@ -66,13 +66,13 @@ function App() {
     {
       id : 5,
       emotion : 5,
-      content : "오늘의 일기 4번",
+      content : "오늘의 일기 5번",
       date : 1660802198975,
     },
   ];
   const [data, dispatch] = useReducer(reducer, dummyData);
 
-  const dataId =   useRef(0);
+  const dataId = useRef(0);
   //CREATE
   const onCreate = (date, content, emotion)=>{
     dispatch({type : 'CREATE', data : {
