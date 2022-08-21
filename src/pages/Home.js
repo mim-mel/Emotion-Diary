@@ -14,7 +14,8 @@ const Home = ()=>{
     const headText = `${curDate.getFullYear()}년 ${curDate.getMonth() + 1}월 `
 
     useEffect(()=>{
-        if(diaryList.length >= 1){
+        // 해당 월에 작성된 일기들만 추리기
+        if (diaryList.length >= 1){
             const firstDay = new Date(
                 curDate.getFullYear(),
                 curDate.getMonth(),
@@ -30,10 +31,6 @@ const Home = ()=>{
             setData(diaryList.filter((it)=> firstDay <= it.date && it.date <= lastDay))
         }
     },[diaryList,curDate])
-
-    useEffect(()=>{
-        console.log(data);
-    },[data]);
 
     const increaseMonth = ()=>{
         setCurDate(

@@ -5,7 +5,7 @@ const DiaryItem = ({id, emotion, content, date})=>{
 
     const  navigate = useNavigate();
 
-    const strDate = `${new Date(date).getFullYear()}년 ${new Date(date).getMonth()}월 ${new Date(date).getDay()}일 `
+    const strDate = new Date(parseInt(date)).toLocaleDateString();
 
     const goDetail = ()=>{
         navigate(`/diary/${id}`)

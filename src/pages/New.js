@@ -1,10 +1,13 @@
+import DiaryEditior from "../components/DiaryEditior";
+
 const New = ()=>{
     return(
         <div>
-            <h1>New</h1>
-            <p>이곳은 일기 추가 작성페이지입니다.</p>
+            <DiaryEditior />
         </div>
-    );
-};
+    )
+}
 
+ 
+    
 export default New;
