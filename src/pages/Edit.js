@@ -4,6 +4,7 @@ import { DiaryStateContext } from "../App";
 import DiaryEditior from "../components/DiaryEditior";
 
 
+
 const Edit = ()=>{
 
     const [originData, setOriginData] = useState();
@@ -19,6 +20,7 @@ const Edit = ()=>{
             if(targetDiary){
                 setOriginData(targetDiary);
             }else{
+                alert('없는 일기입니다');
                 navigate('/', {replace : true});
             }
 
@@ -30,7 +32,7 @@ const Edit = ()=>{
 
     return(
         <div>
-            {originData && <DiaryEditior isEdit = {true} originData={originData}/>}
+            {originData && <DiaryEditior isEdit={true} originData={originData}/>}
         </div>
     );
 };
