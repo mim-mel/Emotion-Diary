@@ -73,7 +73,10 @@ function App() {
   ];
   const [data, dispatch] = useReducer(reducer, dummyData);
 
-  const dataId = useRef(0);
+  //똑같은 ID가 계속해서 발생하는 버그 이유
+  //기작값을 0 => 6으로 바꿔주어야함
+  const dataId = useRef(6);
+
   //CREATE
   const onCreate = (date, content, emotion)=>{
     dispatch({type : 'CREATE', data : {
