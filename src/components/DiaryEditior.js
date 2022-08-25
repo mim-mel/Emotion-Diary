@@ -19,7 +19,7 @@ const DiaryEditior = ({isEdit, originData})=>{
     const [emotion, setEmotion] = useState(3);
     const [date, setDate] = useState(getStringDate(new Date()));
     const [content, setContent] = useState("");
-    const {onCreate, onEdit} = useContext(DiaryDispatchContext);
+    const {onCreate, onEdit, onRemove} = useContext(DiaryDispatchContext);
 
     const handleClickEmote = (emotion) => {
         setEmotion(emotion);
@@ -43,6 +43,13 @@ const DiaryEditior = ({isEdit, originData})=>{
         navigate('/', {replace : true});
     }
 
+    const handleRemove = ()=>{
+        if(window.confirm('정말 삭제하시겠습니까?')){
+            onRemove(originData.id);
+            navigate('/', {replace:true});
+        }
+    }
+
     useEffect(()=>{
         if(isEdit){
             //isEdit이 true일때만 실행됨
@@ -57,6 +64,11 @@ const DiaryEditior = ({isEdit, originData})=>{
         <div className='DiaryEditior'>
             <MyHeader headText={isEdit? '일기 수정하기':'새 일기쓰기'}
                     leftChild={<MyButton text={'< 뒤로가기'} onClick={()=>navigate(-1)}/>}
+                    rightChild={
+                        isEdit && (
+                            <MyButton text={'삭제하기'} type={'negative'} onClick={handleRemove}/>
+                        )
+                    }
             />
             <div>
                 <section>
@@ -97,7 +109,7 @@ const DiaryEditior = ({isEdit, originData})=>{
                 </section>
                 <section>
                     <div className='control_box'>
-                        <MyButton text={'취소하기'} type={'negative'} onClick={()=>navigate(-1)}/>
+                        <MyButton text={'취소하기'} onClick={()=>navigate(-1)}/>
                         <MyButton text={'작성완료'} type={'positive'} onClick={handleSubmit}/>
                     </div>
                 </section>
