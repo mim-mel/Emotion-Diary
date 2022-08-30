@@ -1,23 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&display=swap");
 
 body {
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Gamja Flower', cursive;
+  font-family: "Gamja Flower", cursive;
   min-height: 100vh;
   margin: 0;
 }
 
-@media (min-width : 650px){
+@media (min-width: 650px) {
   .App {
     width: 650px;
-
   }
 }
 
-@media (max-width : 650px){
+@media (max-width: 650px) {
   .App {
     width: 90vw;
   }
@@ -25,7 +24,7 @@ body {
 
 #root {
   background-color: white;
-  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .App {
@@ -41,7 +40,7 @@ body {
   border-radius: 5px;
   padding: 10px 20px 10px 20px;
   font-size: 18px;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 
 .MyButton_default {
@@ -89,7 +88,7 @@ header .head_btn_right {
 }
 
 header button {
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
 }
 
 /* DiaryList */
@@ -115,7 +114,7 @@ header button {
   background-color: #ececec;
   padding: 12px 20px 12px 20px;
   cursor: pointer;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
   font-size: 18px;
 }
 
@@ -185,7 +184,6 @@ header button {
 /* DiaryEditior */
 
 .DiaryEditior {
-
 }
 
 .DiaryEditior section {
@@ -203,7 +201,7 @@ header button {
   background-color: #ececec;
   padding: 10px 20px 10px 20px;
   cursor: pointer;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
   font-size: 18px;
 }
 
@@ -216,7 +214,7 @@ header button {
 }
 
 .DiaryEditior textarea {
-  font-family: 'Gamja Flower', cursive;
+  font-family: "Gamja Flower", cursive;
   font-size: 20px;
   box-sizing: border-box;
   width: 100%;
@@ -288,7 +286,6 @@ header button {
 /* Diary */
 
 .DiaryPage {
-
 }
 
 .DiaryPage section {
@@ -356,7 +353,7 @@ header button {
   padding: 20px;
   text-align: left;
   font-size: 20px;
-  font-family: 'Gamja Flower', cursive;
+  font-family: "Gamja Flower", cursive;
   font-weight: 400;
   line-height: 2.5;
 }
